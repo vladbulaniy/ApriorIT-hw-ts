@@ -20,7 +20,6 @@ var Screen = (function () {
     }
     return Screen;
 }());
-var myScreen = new Screen();
 var TheaterLight = (function () {
     function TheaterLight() {
         this.TurnOnHeadLight = function () {
@@ -68,19 +67,18 @@ var HomeTheater = (function () {
                 messages.innerHTML = '<b>' + 'Theater: film is started' + '</b>';
                 console.log('Theater: film is started');
             }, 7000);
-            setTimeout(function () {
-            }, 8000);
         };
     }
     return HomeTheater;
 }());
 var myDVD = new DVDPlayer();
+var myScreen = new Screen();
 var myTheaterLight = new TheaterLight();
 var myPopcornMaker = new PopcornMaker();
 var myHomeTheater = new HomeTheater();
 var startButton = document.getElementById('startButton');
+var messages = document.getElementById('messages');
 startButton.onclick = function () {
     myHomeTheater.Start();
 };
-var messages = document.getElementById('messages');
 //# sourceMappingURL=app.js.map

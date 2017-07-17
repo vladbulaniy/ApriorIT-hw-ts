@@ -18,8 +18,6 @@ class Screen{
     };
 }
 
-let myScreen = new Screen();
-
 class TheaterLight{
     constructor(){}
     TurnOnHeadLight = function () {
@@ -65,24 +63,18 @@ class HomeTheater{
             messages.innerHTML = '<b>'+'Theater: film is started'+ '</b>';
             console.log('Theater: film is started');
         }, 7000);
-        setTimeout(function () {
-
-        }, 8000);
-
-
     };
 }
 
 let myDVD = new DVDPlayer();
+let myScreen = new Screen();
 let myTheaterLight = new TheaterLight();
 let myPopcornMaker = new PopcornMaker();
 let myHomeTheater = new HomeTheater();
 
-
 let startButton = document.getElementById('startButton');
+let messages = document.getElementById('messages');
 
 startButton.onclick = function () {
     myHomeTheater.Start();
 }
-
-let messages = document.getElementById('messages');

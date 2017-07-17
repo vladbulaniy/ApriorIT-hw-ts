@@ -1,62 +1,61 @@
-body{
+body {
   font-family: "Arial Narrow";
   font-size: 20px;
-  background-color:black;
-  background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-color: black;
+  background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+  radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   background-size: 100px 100px;
 }
 
-h1{
+h1 {
   text-align: center;
-  color: #f51f1f;
+  color: #D45D55;
   font-size: 3em;
   text-shadow: 0 2px white;
 }
 
-remote-control{
+remote-control {
   width: 200px;
   height: 600px;
   border: 1px solid black;
   background-color: cornsilk;
-
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
-remote-control button{
+remote-control button {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-margin-bottom: 70px;
-  background: linear-gradient(315deg, transparent 75%, #d45d55 0)-10px 0,
-  linear-gradient(45deg, transparent 75%, #d45d55 0)-10px 0,
+  margin-bottom: 70px;
+  background: linear-gradient(315deg, transparent 75%, #d45d55 0) -10px 0,
+  linear-gradient(45deg, transparent 75%, #d45d55 0) -10px 0,
   linear-gradient(135deg, #a7332b 50%, transparent 0) 0 0,
   linear-gradient(45deg, #6a201b 50%, #561a16 0) 0 0 #561a16;
   background-size: 20px 20px;
   color: white;
-font-size: 2em;
+  font-size: 2em;
   cursor: pointer;
   outline: none;
 }
 
-remote-control header b{
+remote-control header b {
   font-size: 1.5em;
 }
 
-remote-control header p{
+remote-control header p {
   margin-top: -2px;
   text-align: center;
 }
 
-#messages{
+#messages {
   margin: 0 10px;
 }
