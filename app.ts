@@ -70,6 +70,6 @@ let theaterLight = new TheaterLight();
 let popcornMaker = new PopcornMaker();
 let homeTheater = new HomeTheater();
 
-startButton.onclick = function () {
+startButton.onclick = () => {
     homeTheater.start();
 }
