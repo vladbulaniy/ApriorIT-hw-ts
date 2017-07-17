@@ -1,80 +1,75 @@
+let startButton = document.getElementById('startButton');
+let messages = document.getElementById('messages');
+
 class DVDPlayer{
-    constructor(){}
-    loadDisk = function () {
+    loadDisk() {
         messages.innerHTML = 'DVD: disk loaded'+ '<br />';
         console.log('DVD: disk loaded');
     };
-    play = function () {
+    play() {
         messages.innerHTML = messages.innerHTML + 'DVD: play started'+ '<br />';
         console.log('DVD: play started');
     };
 }
 
-class Screen{
-    constructor(){}
-    TurnOnScreen = function () {
+class DVDScreen{
+    turnOnScreen() {
         messages.innerHTML = messages.innerHTML + 'Screen: screen is on'+ '<br />';
         console.log('Screen: screen is on');
     };
 }
 
 class TheaterLight{
-    constructor(){}
-    TurnOnHeadLight = function () {
+    turnOnHeadLight() {
         messages.innerHTML = messages.innerHTML +  'Light: Head light is on'+ '<br />';
         console.log('Light: Head light is on');
     };
-    TurnOnBackLight = function () {
+    turnOnBackLight() {
         messages.innerHTML = messages.innerHTML +  'Light: Back light is on'+ '<br />';
         console.log('Light: Back light is on');
     };
 }
 
 class PopcornMaker{
-    constructor(){}
-    StartMakingFood = function () {
+    startMakingFood() {
         messages.innerHTML = messages.innerHTML +  'Popcorn: food is ready'+ '<br />';
         console.log('Popcorn: food is ready');
     };
 }
 
 class HomeTheater{
-    constructor(){}
-    Start = function () {
-        setTimeout(function () {
-            myDVD.loadDisk()
+    start() {
+        setTimeout(() => {
+            dvdPlayer.loadDisk()
         }, 1000);
-        setTimeout(function () {
-            myDVD.play();
+        setTimeout(() => {
+            dvdPlayer.play();
         }, 2000);
-        setTimeout(function () {
-            myScreen.TurnOnScreen();
+        setTimeout(() => {
+            dvdScreen.turnOnScreen();
         }, 3000);
-        setTimeout(function () {
-            myTheaterLight.TurnOnHeadLight();
+        setTimeout(() => {
+            theaterLight.turnOnHeadLight();
         }, 4000);
-        setTimeout(function () {
-            myTheaterLight.TurnOnBackLight();
+        setTimeout(() => {
+            theaterLight.turnOnBackLight();
         }, 5000);
-        setTimeout(function () {
-            myPopcornMaker.StartMakingFood();
+        setTimeout(() => {
+            popcornMaker.startMakingFood();
         }, 6000);
-        setTimeout(function () {
+        setTimeout(() => {
             messages.innerHTML = '<b>'+'Theater: film is started'+ '</b>';
             console.log('Theater: film is started');
         }, 7000);
     };
 }
 
-let myDVD = new DVDPlayer();
-let myScreen = new Screen();
-let myTheaterLight = new TheaterLight();
-let myPopcornMaker = new PopcornMaker();
-let myHomeTheater = new HomeTheater();
-
-let startButton = document.getElementById('startButton');
-let messages = document.getElementById('messages');
+let dvdPlayer = new DVDPlayer();
+let dvdScreen = new DVDScreen();
+let theaterLight = new TheaterLight();
+let popcornMaker = new PopcornMaker();
+let homeTheater = new HomeTheater();
 
 startButton.onclick = function () {
-    myHomeTheater.Start();
+    homeTheater.start();
 }
