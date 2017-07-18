@@ -2,43 +2,43 @@ let startButton = document.getElementById('startButton');
 let messages = document.getElementById('messages');
 
 class DVDPlayer{
-    loadDisk() {
+    loadDisk():void {
         messages.innerHTML = 'DVD: disk loaded'+ '<br />';
         console.log('DVD: disk loaded');
     };
-    play() {
+    play():void {
         messages.innerHTML = messages.innerHTML + 'DVD: play started'+ '<br />';
         console.log('DVD: play started');
     };
 }
 
 class DVDScreen{
-    turnOnScreen() {
+    turnOnScreen():void {
         messages.innerHTML = messages.innerHTML + 'Screen: screen is on'+ '<br />';
         console.log('Screen: screen is on');
     };
 }
 
 class TheaterLight{
-    turnOnHeadLight() {
+    turnOnHeadLight():void {
         messages.innerHTML = messages.innerHTML +  'Light: Head light is on'+ '<br />';
         console.log('Light: Head light is on');
     };
-    turnOnBackLight() {
+    turnOnBackLight():void {
         messages.innerHTML = messages.innerHTML +  'Light: Back light is on'+ '<br />';
         console.log('Light: Back light is on');
     };
 }
 
 class PopcornMaker{
-    startMakingFood() {
+    startMakingFood():void {
         messages.innerHTML = messages.innerHTML +  'Popcorn: food is ready'+ '<br />';
         console.log('Popcorn: food is ready');
     };
 }
 
 class HomeTheater{
-    start() {
+    start():void {
         setTimeout(() => {
             dvdPlayer.loadDisk()
         }, 1000);
